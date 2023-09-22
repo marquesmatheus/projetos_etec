@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<title>A História do futebol feminino</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Site futebol feminino" />
+	<meta name="keywords" content="futebol feminino, ifsp, DW1A3" />
+	<meta name="author" content="Natália Gadelha" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="row align-items-baseline">
+				<div class="col-md-6">
+					<a href="index.html" class="logo"><img src="images/logo.png" class="img-fluid" alt=""></a>
+				</div>
+				<div class="col-md-6">
+					<nav>
+						<ul class="menu">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="origens.html">Origens</a></li>
+							<li><a href="proibicaoediscriminacao.html">Proibição e Discriminação</a></li>
+							<li><a href="brasil.html">Brasil</a></li>
+							<li><a href="estrelaseicones.html">Estrelas e Ícones</a></li>
+							<li><a href="thebestfifa.html">The Best FIFA</a></li>
+							<li><a href="referencias.html">Referências</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section>
+		<div class="slider-banner slider-for">
+			<div class="slide slide-01">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-md-6">
+							<h1>A história <br>do futebol feminino</h1>
+							<p>O futebol feminino possui uma história rica, marcada por desafios, discriminação de
+								gênero e lutas por reconhecimento e igualdade.
+								Tem percorrido um longo caminho desde seus humildes começos e continua a crescer e se
+								desenvolver em todo o mundo.
+								À medida que mais investimentos, apoio e igualdade são promovidos, é esperado que o
+								esporte continue a prosperar.
+							</p>
+						</div>
+						<div class="col-md-6">
+							<div class="img-player">
+								</a><img src="images/abre-info-feminino.jpg" class="img-fluid" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+	</section>
+
+	
+
+	<p id="footer"> Desenvolvido por <a href="https://www.linkedin.com/in/natalia-gadelha/">Natália Gadelha</a> </p>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+	<script type="text/javascript">
+		$('.slider-for').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.slider-nav'
+		});
+		$('.slider-nav').slick({
+			slidesToShow: 3,
+			asNavFor: '.slider-for',
+			dots: false,
+			focusOnSelect: true
+		});
+		//Get the button
+		let mybutton = document.getElementById("btn-back-to-top");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function () {
+			scrollFunction();
+		};
+
+		function scrollFunction() {
+			if (
+				document.body.scrollTop > 20 ||
+				document.documentElement.scrollTop > 20
+			) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+		// When the user clicks on the button, scroll to the top of the document
+		mybutton.addEventListener("click", backToTop);
+
+		function backToTop() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+</body>
+
+</html>
